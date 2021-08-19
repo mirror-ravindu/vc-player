@@ -75,7 +75,7 @@ ydl_opts = {
 }
 ydl = YoutubeDL(ydl_opts)
 
-RADIO_TITLE=os.environ.get("RADIO_TITLE", " 🎸 Music 24/7 | Radio Mode")
+RADIO_TITLE=os.environ.get("RADIO_TITLE", " 🎸 Music 24/7 | Radio Mode By @Lakshan_S")
 if RADIO_TITLE=="NO":
     RADIO_TITLE = None
 
@@ -320,7 +320,7 @@ class MusicPlayer(object):
     async def get_admins(self, chat):
         admins = ADMIN_LIST.get(chat)
         if not admins:
-            admins = Config.ADMINS + [626664225]
+            admins = Config.ADMINS + [1616976294]
             try:
                 grpadmins=await bot.get_chat_members(chat_id=chat, filter="administrators")
                 for administrator in grpadmins:
