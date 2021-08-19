@@ -863,13 +863,13 @@ allcmd = ["play", "player", "splay", f"splay@{U}", f"play@{U}", f"player@{U}"] +
 async def not_chat(_, m: Message):
     buttons = [
         [
-            InlineKeyboardButton('⚡️Make Own Bot', url='https://heroku.com/deploy?template=https://github.com/subinps/MusicPlayer'),
-            InlineKeyboardButton('🧩 Source Code', url='https://github.com/subinps/MusicPlayer'),
+            InlineKeyboardButton('⚡️Find New Updates', url='https://t.me/VPN_Stock'),
+            InlineKeyboardButton('🧩 Source Code', url='https://t.me/Lakshan_S'),
         ],
         [
-            InlineKeyboardButton('How to Make', url='https://youtu.be/iBK-5pP2eHM'),
+            InlineKeyboardButton('How to Make a baby', url='https://www.youtube.com/watch?v=ZAfPjLTdlvU'),
             InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help')       
         ]
         ]
-    k=await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [SOURCE CODE](https://github.com/subinps/MusicPlayer) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
+    k=await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot. Ask for [SOURCE CODE](https://t.me/Lakshan_S) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
     await mp.delete(m)
