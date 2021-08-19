@@ -212,7 +212,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="help":
         buttons = [
             [
-                InlineKeyboardButton('⚙️ Friends Channel', url='https://t.me/subin_works'),
+                InlineKeyboardButton('⚙️ Friends Channel', url='https://t.me/UNLIMITEDworldTEAM'),
                 InlineKeyboardButton('🤖 VpnStock', url='https://t.me/VPN_Stock'),
             ],
             [
