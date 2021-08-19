@@ -73,15 +73,15 @@ You can also use /splay <song name> to play a song from Jio Saavn or /cplay <cha
 async def start(client, message):
     buttons = [
         [
-        InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/UNLIMITEDworldTEAM'),
-        InlineKeyboardButton('🤖 VpnStock', url='https://t.me/VPN_Stock'),
+        InlineKeyboardButton('👥 Update Channel', url='https://t.me/UNLIMITEDworldTEAM'),
+        InlineKeyboardButton('👤 VpnStock', url='https://t.me/VPN_Stock'),
     ],
     [
         InlineKeyboardButton('👨🏼‍💻 Developer', url='https://t.me/Lakshan_S'),
-        InlineKeyboardButton('🧩Our Group', url='https://t.me/SSH_Store'),
+        InlineKeyboardButton('👀 Our Group', url='https://t.me/SSH_Store'),
     ],
     [
-        InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help'),
+        InlineKeyboardButton('🚸 Help', callback_data='help'),
         
     ]
     ]
@@ -96,12 +96,12 @@ async def start(client, message):
 async def show_help(client, message):
     buttons = [
         [
-            InlineKeyboardButton('⚙️ Friends Channel', url='https://t.me/UNLIMITEDworldTEAM'),
-            InlineKeyboardButton('🤖 VpnStock', url='https://t.me/VPN_Stock'),
+            InlineKeyboardButton('👥 Friends Channel', url='https://t.me/UNLIMITEDworldTEAM'),
+            InlineKeyboardButton('👤 VpnStock', url='https://t.me/VPN_Stock'),
         ],
         [
             InlineKeyboardButton('👨🏼‍💻 Developer', url='https://t.me/Lakshan_S'),
-            InlineKeyboardButton('🧩Our Group', url='https://t.me/SSH_Store'),
+            InlineKeyboardButton('👀 Our Group', url='https://t.me/SSH_Store'),
         ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
