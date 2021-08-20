@@ -111,44 +111,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         ],
                     ]
                 )
-            )
-
-    elif query.data == "upload": 
-        async def upload(client, message):
-    if not playlist:
-        k=await message.reply_text(f"{emoji.NO_ENTRY} No songs are playing")
-        await mp.delete(k)
-        await mp.delete(message)
-        return
-    url=playlist[0][2]
-    if playlist[0][3] == "telegram":
-        await client.send_audio(chat_id=message.chat.id, audio=url, caption="Uploaded Using [MusicPlayer](https://t.me/MusicForSSHstore_bot)")
-    elif playlist[0][3] == "youtube":
-        file=GET_FILE[url]
-        thumb=GET_THUMB[url]
-        response = requests.get(thumb, allow_redirects=True)
-        open(f"{playlist[0][5]}.jpeg", 'wb').write(response.content)
-        await message.reply_chat_action("upload_document")
-        m=await message.reply_text(f"Starting Uploading {playlist[0][1]}...")
-        await client.send_audio(chat_id=message.chat.id, audio=file, file_name=playlist[0][1], thumb=f"{playlist[0][5]}.jpeg", title=playlist[0][1], caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded Using [MusicPlayer](https://github.com/subinps/MusicPlayer)</b>")
-        await m.delete()
-    else:
-        file=GET_FILE[url]
-        thumb=GET_THUMB[url]
-        response = requests.get(thumb, allow_redirects=True)
-        open(f"{playlist[0][5]}.jpeg", 'wb').write(response.content)
-        await message.reply_chat_action("upload_document")
-        cmd=f"cp {file} {playlist[0][5]}.mp3"
-        os.system(cmd)
-        await asyncio.sleep(2)
-        m=await message.reply_text(f"Starting Uploading {playlist[0][1]}...")
-        await client.send_audio(chat_id=message.chat.id, audio=f"{playlist[0][5]}.mp3", file_name=f"{playlist[0][1]}", thumb=f"{playlist[0][5]}.jpeg", title=playlist[0][1], caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded Using [MusicPlayer](https://github.com/subinps/MusicPlayer)</b>")
-        await m.delete()
-        try:
-            os.remove(f"{playlist[0][5]}.mp3")
-        except:
-            pass
-        
+            )     
            
     elif query.data == "pause":
         if not playlist:
