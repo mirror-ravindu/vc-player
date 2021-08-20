@@ -377,9 +377,9 @@ class MusicPlayer(object):
                     for track in playlist[:2]:
                         await self.download_audio(track)
             if not playlist:
-                print("No songs Found From Channel, Starting Red FM")
+                print("No songs Found From Channel, Starting From @Lakshan's Channel")
                 Config.CPLAY=False
-                Config.STREAM_URL="https://bcovlive-a.akamaihd.net/19b535b7499a4719a5c19e043063f5d9/ap-southeast-1/6034685947001/playlist.m3u8?nocache=825347"
+                Config.STREAM_URL="-1001598929842"
                 await self.start_radio()
                 return
             else:
@@ -390,9 +390,9 @@ class MusicPlayer(object):
                     await self.send_playlist()          
         except Exception as e:
             Config.CPLAY=False
-            Config.STREAM_URL="https://bcovlive-a.akamaihd.net/19b535b7499a4719a5c19e043063f5d9/ap-southeast-1/6034685947001/playlist.m3u8?nocache=825347"
+            Config.STREAM_URL="-1001598929842"
             await self.start_radio()
-            print("Errorrs Occured\n Starting Red FM", e)
+            print("Errorrs Occured\n Starting From @Lakshan's Channel", e)
 
 
 mp = MusicPlayer()
