@@ -64,7 +64,7 @@ async def yplay(_, message: Message):
     if ADMIN_ONLY == "Y":
         admins = await mp.get_admins(CHAT)
         if message.from_user.id not in admins:
-            m=await message.reply_sticker("BAADBAADowIAAsj4JVPNEC9RHAkDfwI")
+            m=await message.reply_sticker("CAADBQADjgUAAn8z8VbWAAGHGvUMFr4C")
             await mp.delete(m)
             await mp.delete(message)
             return
@@ -302,7 +302,7 @@ async def deezer(_, message):
     if ADMIN_ONLY == "Y":
         admins = await mp.get_admins(CHAT)
         if message.from_user.id not in admins:
-            k=await message.reply_sticker("BAADBAADowIAAsj4JVPNEC9RHAkDfwI")
+            k=await message.reply_sticker("CAADBQADjgUAAn8z8VbWAAGHGvUMFr4C")
             await mp.delete(k)
             await mp.delete(message)
             return
@@ -437,7 +437,7 @@ async def player(_, m: Message):
                     [
                         InlineKeyboardButton("🔄", callback_data="replay"),
                         InlineKeyboardButton("⏯", callback_data="pause"),
-                        InlineKeyboardButton("⏩", callback_data="skip"),
+                        InlineKeyboardButton("⏩", callback_data="skip")
                         InlineKeyboardButton("📥 Download", callback_data="upload")
                     
                     ],
@@ -457,7 +457,7 @@ async def player(_, m: Message):
                     [
                         InlineKeyboardButton("🔄", callback_data="replay"),
                         InlineKeyboardButton("⏯", callback_data="pause"),
-                        InlineKeyboardButton("⏩", callback_data="skip"),
+                        InlineKeyboardButton("⏩", callback_data="skip")
                         InlineKeyboardButton("📥 Download", callback_data="upload")
                     
                     ],
@@ -824,7 +824,7 @@ async def upload(client, message):
         return
     url=playlist[0][2]
     if playlist[0][3] == "telegram":
-        await client.send_audio(chat_id=message.chat.id, audio=url, caption="Uploaded Using [MusicPlayer](https://t.me/MusicForSSHstore_bot")
+        await client.send_audio(chat_id=message.chat.id, audio=url, caption="Uploaded Using [MusicPlayer](https://t.me/MusicForSSHstore_bot)"
     elif playlist[0][3] == "youtube":
         file=GET_FILE[url]
         thumb=GET_THUMB[url]
