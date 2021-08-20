@@ -817,7 +817,7 @@ async def channel_play_list(client, m: Message):
     await mp.delete(m)
 
 
-@Client.on_message(filters.command(['upload', f'upload@{U}']) & (filters.chat(CHAT) | filters.private))
+@Client.on_message(filters.command(["upload", f'upload@{U}']) & (filters.chat(CHAT) | filters.private))
 async def upload(client, message):
     if not playlist:
         k=await message.reply_text(f"{emoji.NO_ENTRY} No songs are playing")
