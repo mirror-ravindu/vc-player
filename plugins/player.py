@@ -27,7 +27,7 @@ from pyrogram import Client, filters, emoji
 from pyrogram.methods.messages.download_media import DEFAULT_DOWNLOAD_DIR
 from pyrogram.types import Message
 from utils import mp, RADIO, USERNAME, FFMPEG_PROCESSES, playlist, GET_FILE
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton,CallbackQuery
 from youtube_search import YoutubeSearch
 from pyrogram import Client
 import subprocess
@@ -64,7 +64,7 @@ async def yplay(_, message: Message):
     if ADMIN_ONLY == "Y":
         admins = await mp.get_admins(CHAT)
         if message.from_user.id not in admins:
-            m=await message.reply_sticker("CAADBQADjgUAAn8z8VbWAAGHGvUMFr4C")
+            m=await message.reply_sticker("CAADBQADPgMAArMYYFdnPyni2AHCwwI")
             await mp.delete(m)
             await mp.delete(message)
             return
@@ -302,7 +302,7 @@ async def deezer(_, message):
     if ADMIN_ONLY == "Y":
         admins = await mp.get_admins(CHAT)
         if message.from_user.id not in admins:
-            k=await message.reply_sticker("CAADBQADjgUAAn8z8VbWAAGHGvUMFr4C")
+            k=await message.reply_sticker("CAADBQADPgMAArMYYFdnPyni2AHCwwI")
             await mp.delete(k)
             await mp.delete(message)
             return
@@ -441,7 +441,7 @@ async def player(_, m: Message):
                     
                     ],
                     [
-                        InlineKeyboardButton("📥 Download", ="upload"),
+                        InlineKeyboardButton("📥 Download", callback_data="upload")
                     ]
                 ]
                 )
@@ -462,7 +462,7 @@ async def player(_, m: Message):
                     
                     ],
                     [
-                        InlineKeyboardButton("📥 Download", ="upload"),
+                        InlineKeyboardButton("📥 Download", callback_data="upload")
                     ]
                 ]
                 )
@@ -817,7 +817,7 @@ async def channel_play_list(client, m: Message):
     await mp.delete(m)
 
 
-@Client.on_message(filters.command(["upload", f'upload@{U}']) & (filters.chat(CHAT) | filters.private))
+@Client.on_message(filters.command(['upload', f'upload@{U}']) & (filters.chat(CHAT) | filters.private))
 async def upload(client, message):
     if not playlist:
         k=await message.reply_text(f"{emoji.NO_ENTRY} No songs are playing")
@@ -853,6 +853,14 @@ async def upload(client, message):
         except:
             pass
  
+
+@Client.on_callback_query()
+async def cb_handler(client: Client, query: CallbackQuery):
+    if query.data == "upload":
+        await query.answer(
+            "Upload",
+            show_alert=True
+            )
 
 admincmds=["join", "unmute", "mute", "leave", "clean", "vc", "pause", "resume", "stop", "skip", "radio", "stopradio", "replay", "restart", "volume", "shuffle", "clearplaylist", "cplay", f"cplay@{U}", f"clearplaylist@{U}", f"shuffle@{U}", f"volume@{U}", f"join@{U}", f"unmute@{U}", f"mute@{U}", f"leave@{U}", f"clean@{U}", f"vc@{U}", f"pause@{U}", f"resume@{U}", f"stop@{U}", f"skip@{U}", f"radio@{U}", f"stopradio@{U}", f"replay@{U}", f"restart@{U}"]
 
