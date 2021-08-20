@@ -73,7 +73,7 @@ You can also use /splay <song name> to play a song from Jio Saavn or /cplay <cha
 async def start(client, message):
     buttons = [
         [
-        InlineKeyboardButton('👥 Update Channel', url='https://t.me/UNLIMITEDworldTEAM'),
+        InlineKeyboardButton('👥 Friends Channel', url='https://t.me/UNLIMITEDworldTEAM'),
         InlineKeyboardButton('👤 VpnStock', url='https://t.me/VPN_Stock'),
     ],
     [
