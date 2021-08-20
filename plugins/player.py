@@ -438,9 +438,10 @@ async def player(_, m: Message):
                         InlineKeyboardButton("🔄", callback_data="replay"),
                         InlineKeyboardButton("⏯", callback_data="pause"),
                         InlineKeyboardButton("⏩", callback_data="skip")
-                        InlineKeyboardButton("📥 Download", callback_data="upload")
                     
                     ],
+                    [
+                        InlineKeyboardButton("📥 Download", callback_data="upload")
 
                 ]
                 )
@@ -458,9 +459,10 @@ async def player(_, m: Message):
                         InlineKeyboardButton("🔄", callback_data="replay"),
                         InlineKeyboardButton("⏯", callback_data="pause"),
                         InlineKeyboardButton("⏩", callback_data="skip")
-                        InlineKeyboardButton("📥 Download", callback_data="upload")
                     
                     ],
+                    [
+                        InlineKeyboardButton("📥 Download", callback_data="upload")
 
                 ]
                 )
