@@ -441,7 +441,7 @@ async def player(_, m: Message):
                     
                     ],
                     [
-                        InlineKeyboardButton("📥 Download", callback_data="upload"),
+                        InlineKeyboardButton("📥 Download", ="upload"),
                     ]
                 ]
                 )
@@ -462,7 +462,7 @@ async def player(_, m: Message):
                     
                     ],
                     [
-                        InlineKeyboardButton("📥 Download", callback_data="upload"),
+                        InlineKeyboardButton("📥 Download", ="upload"),
                     ]
                 ]
                 )
