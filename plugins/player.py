@@ -64,7 +64,7 @@ async def yplay(_, message: Message):
     if ADMIN_ONLY == "Y":
         admins = await mp.get_admins(CHAT)
         if message.from_user.id not in admins:
-            m=await message.reply_sticker("CAADBQADsQIAAtILIVYld1n74e3JuQI")
+            m=await message.reply_sticker("BAADBAADowIAAsj4JVPNEC9RHAkDfwI")
             await mp.delete(m)
             await mp.delete(message)
             return
@@ -220,7 +220,7 @@ async def yplay(_, message: Message):
         try:
             thumb = info["thumbnail"]
         except:
-            thumb="https://telegra.ph/file/181242eab5c4a74916d01.jpg"
+            thumb="https://telegra.ph/file/48e92f892c5f3876e40bb.jpg"
             pass
         if int(duration) > DURATION_LIMIT:
             k=await message.reply_text(f"❌ Videos longer than {DURATION_LIMIT} minute(s) aren't allowed, the provided video is {duration} minute(s)")
@@ -302,7 +302,7 @@ async def deezer(_, message):
     if ADMIN_ONLY == "Y":
         admins = await mp.get_admins(CHAT)
         if message.from_user.id not in admins:
-            k=await message.reply_sticker("CAADBQADsQIAAtILIVYld1n74e3JuQI")
+            k=await message.reply_sticker("BAADBAADowIAAsj4JVPNEC9RHAkDfwI")
             await mp.delete(k)
             await mp.delete(message)
             return
@@ -331,7 +331,7 @@ async def deezer(_, message):
         try:
             thumb=a.get("image")
         except:
-            thumb="https://telegra.ph/file/181242eab5c4a74916d01.jpg"
+            thumb="https://telegra.ph/file/48e92f892c5f3876e40bb.jpg"
             pass
         GET_THUMB[url] = thumb
     except:
@@ -437,7 +437,8 @@ async def player(_, m: Message):
                     [
                         InlineKeyboardButton("🔄", callback_data="replay"),
                         InlineKeyboardButton("⏯", callback_data="pause"),
-                        InlineKeyboardButton("⏩", callback_data="skip")
+                        InlineKeyboardButton("⏩", callback_data="skip"),
+                        InlineKeyboardButton("📥 Download", callback_data="upload")
                     
                     ],
 
@@ -456,7 +457,8 @@ async def player(_, m: Message):
                     [
                         InlineKeyboardButton("🔄", callback_data="replay"),
                         InlineKeyboardButton("⏯", callback_data="pause"),
-                        InlineKeyboardButton("⏩", callback_data="skip")
+                        InlineKeyboardButton("⏩", callback_data="skip"),
+                        InlineKeyboardButton("📥 Download", callback_data="upload")
                     
                     ],
 
@@ -822,7 +824,7 @@ async def upload(client, message):
         return
     url=playlist[0][2]
     if playlist[0][3] == "telegram":
-        await client.send_audio(chat_id=message.chat.id, audio=url, caption="Uploaded Using [MusicPlayer](https://github.com/subinps/MusicPlayer)")
+        await client.send_audio(chat_id=message.chat.id, audio=url, caption="Uploaded Using [MusicPlayer](https://t.me/MusicForSSHstore_bot")
     elif playlist[0][3] == "youtube":
         file=GET_FILE[url]
         thumb=GET_THUMB[url]
