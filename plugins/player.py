@@ -64,7 +64,7 @@ async def yplay(_, message: Message):
     if ADMIN_ONLY == "Y":
         admins = await mp.get_admins(CHAT)
         if message.from_user.id not in admins:
-            m=await message.reply_sticker("CAADBQADPgMAArMYYFdnPyni2AHCwwI")
+            m=await message.reply_sticker("CAADBQADjgUAAn8z8VbWAAGHGvUMFr4C")
             await mp.delete(m)
             await mp.delete(message)
             return
@@ -302,7 +302,7 @@ async def deezer(_, message):
     if ADMIN_ONLY == "Y":
         admins = await mp.get_admins(CHAT)
         if message.from_user.id not in admins:
-            k=await message.reply_sticker("CAADBQADPgMAArMYYFdnPyni2AHCwwI")
+            k=await message.reply_sticker("CAADBQADjgUAAn8z8VbWAAGHGvUMFr4C")
             await mp.delete(k)
             await mp.delete(message)
             return
@@ -441,7 +441,7 @@ async def player(_, m: Message):
                     
                     ],
                     [
-                        InlineKeyboardButton("📥 Download", callback_data="upload")
+                        InlineKeyboardButton("📥 Download", callback_data="upload"),
                     ]
                 ]
                 )
@@ -462,7 +462,7 @@ async def player(_, m: Message):
                     
                     ],
                     [
-                        InlineKeyboardButton("📥 Download", callback_data="upload")
+                        InlineKeyboardButton("📥 Download", callback_data="upload"),
                     ]
                 ]
                 )
