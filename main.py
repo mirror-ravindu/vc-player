@@ -173,6 +173,10 @@ bot.send(
             types.BotCommand(
                 command="restart",
                 description="Update and restart the bot"
+            ),
+            types.BotCommand(
+                command="upload",
+                description="Uploading song play on VC"
             )
         ]
     )
