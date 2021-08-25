@@ -875,11 +875,11 @@ allcmd = ["play", "player", "splay", f"splay@{U}", f"play@{U}", f"player@{U}"] +
 async def not_chat(_, m: Message):
     buttons = [
         [
-            InlineKeyboardButton('⚡️Find New Updates', url='https://t.me/VPN_Stock'),
-            InlineKeyboardButton('🧩 Source Code', url='https://t.me/Lakshan_S'),
+            InlineKeyboardButton('🍥 𝘧𝘳𝘪𝘻𝘵𝘺™ 𝘊𝘏𝘈𝘕𝘕𝘌𝘓 🍥', url='https://t.me/frizty_channel'),
+            InlineKeyboardButton('☘ 𝘝𝘗𝘕 𝘚𝘛𝘖𝘊𝘒 ☘', url='https://t.me/VPN_Stock'),
         ],
         [
-            InlineKeyboardButton('How to Make a baby', url='https://www.youtube.com/watch?v=ZAfPjLTdlvU'),
+            InlineKeyboardButton('⚡ 𝙐𝙉𝙇𝙄𝙈𝙄𝙏𝙀𝘿 𝙬𝙤𝙧𝙡𝙙™ ⚡', url='https://t.me/UNLIMITEDworldTEAM'),
             InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help')       
         ]
         ]
