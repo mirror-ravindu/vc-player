@@ -212,12 +212,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="help":
         buttons = [
             [
-                InlineKeyboardButton('👥 Friends Channel', url='https://t.me/UNLIMITEDworldTEAM'),
-                InlineKeyboardButton('👤 VpnStock', url='https://t.me/VPN_Stock'),
+                InlineKeyboardButton('🍥 𝘧𝘳𝘪𝘻𝘵𝘺™ 𝘊𝘏𝘈𝘕𝘕𝘌𝘓 🍥', url='https://t.me/frizty_channel'),
+                InlineKeyboardButton('⚡ 𝙐𝙉𝙇𝙄𝙈𝙄𝙏𝙀𝘿 𝙬𝙤𝙧𝙡𝙙™ ⚡', url='https://t.me/UNLIMITEDworldTEAM'),
             ],
             [
-                InlineKeyboardButton('👨🏼‍💻 Developer', url='https://t.me/Lakshan_S'),
-                InlineKeyboardButton('👀 Our Group', url='https://t.me/SSH_Store'),
+                InlineKeyboardButton('🍒 𝑺𝑺𝑯 𝑺𝑻𝑶𝑹𝑬 🍒', url='https://t.me/SSH_Store'),
+                InlineKeyboardButton('☘ 𝘝𝘗𝘕 𝘚𝘛𝘖𝘊𝘒 ☘', url='https://t.me/VPN_Stock'),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
