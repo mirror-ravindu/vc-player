@@ -28,8 +28,8 @@ from config import Config
 REPLY_MESSAGE=Config.REPLY_MESSAGE
 buttons = [
     [
-        InlineKeyboardButton('⚡️Find New Updates', url='https://t.me/UNLIMITEDworldTEAM'),
-        InlineKeyboardButton('🧩Our Group', url='https://t.me/SSH_Store'),
+        InlineKeyboardButton('⚡️ Find New Updates ⚡', url='https://t.me/frizty_channel'),
+        InlineKeyboardButton('🍒 𝑺𝑺𝑯 𝑺𝑻𝑶𝑹𝑬 🍒', url='https://t.me/SSH_Store'),
     ],
     [
         InlineKeyboardButton('🎧Play Music', url=f'https://t.me/{USERNAME}'),
