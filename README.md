@@ -17,6 +17,8 @@ License -> https://github.com/subinps/MusicPlayer/blob/master/LICENSE
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/subinps/MusicPlayer)
 
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fmirror-ravindu%2Fvc-player.git&envs=ADMINS%2CADMIN_ONLY%2CAPI_HASH%2CSESSION_STRING%2CBOT_TOKEN%2CMAXIMUM_DURATION%2CLOG_GROUP%2CCHAT%2CREPLY_MESSAGE%2CSTREAM_URL%2CAPI_ID)
+
 NOTE: Make sure you have started a VoiceChat in your Group before deploying.
 ### Deploy to VPS
 
